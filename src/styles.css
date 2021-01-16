@@ -1,1 +1,10 @@
 /* Add application styles & imports to this file! */
+
+li.nav-item:focus{
+    outline: none;
+}
+  
+li.breadcrumb-item:focus{
+   outline: none;
+}
+  

@@ -1,0 +1,20 @@
+<div class="border-child">
+  <div>
+    Possible new Item: <i>{{itemName}}</i>
+  </div>
+  <div *ngIf="itemNameList.length else ifNoItem">
+    <ol class="item-list-group">
+      <li *ngFor="let item of itemNameList; let i = index" class="item-list">
+        {{item}}
+        <span class="badge badge-danger" (click)="deleteName(i)">
+          <i class="fa fa-trash"></i>
+        </span>
+      </li>
+    </ol>
+  </div>
+  <ng-template #ifNoItem>
+    <p class="text-danger">
+      No item Found in List Currently
+    </p>
+  </ng-template>
+</div>

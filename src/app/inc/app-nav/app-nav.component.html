@@ -1,0 +1,37 @@
+<!--Main Navigation-->
+<header>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue scrolling-navbar">
+    <a href="https://jaysoni.dev/" rel="noreferrer" class="navbar-brand"><strong>Angular10POCs</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" routerLink="/home">
+          <span class="nav-link">My Home <span class="sr-only">(current)</span></span>
+        </li>
+        <li class="nav-item" routerLinkActive="active" routerLink="/component-interaction">
+          <span class="nav-link">Component Interaction</span>
+        </li>
+        <li class="nav-item" routerLinkActive="active" routerLink="/http-request">
+          <span class="nav-link">HTTP Request</span>
+        </li>
+        <li class="nav-item" routerLinkActive="active" routerLink="/async-pipe">
+          <span class="nav-link">Async Pipe Usage</span>
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item" (click)="settings()">
+          <a class="nav-link"><i class="fas fa-cog"></i></a>
+        </li>
+        <li *ngIf="showDeleteIcon" class="nav-item" (click)="clearLocalStorage()">
+          <a class="nav-link"><i class="fas fa-trash"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+<!--Main Navigation-->

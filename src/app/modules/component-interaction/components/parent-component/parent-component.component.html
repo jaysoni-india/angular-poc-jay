@@ -1,0 +1,25 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" routerLink="../independent"><span>Component Interaction</span></li>
+    <li class="breadcrumb-item active"><span>Parent Child Communication Example</span></li>
+  </ol>
+</nav>
+
+<div class="border-parent">
+  <h5>Parent Component</h5>
+  <p>Blue color border is parent component</p>
+  <form class="form form-inline">
+    <div class="form-group">
+      <label>
+        <input autocomplete="off" [(ngModel)]="itemName" placeholder="Enter Item Name" type="text" name="item" />
+      </label>
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="addItem()" class="btn btn-primary btn-sm" [ngClass]="{'disabled': !itemName.length}">
+        +Add Item
+      </button>
+    </div>
+  </form>
+  <h6>List Count: <i>{{itemCount}}</i></h6>
+  <app-child-component (itemCountEmitter)="getItemCount($event)" [itemNameSubjectChild]="itemNameSubject" [itemNameChild]="itemName"></app-child-component>
+</div>
